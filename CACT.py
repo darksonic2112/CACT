@@ -1,11 +1,12 @@
-import random
 import cassiopeia as cass
-import os
 import json
+import tkinter as tk
 
 from cassiopeia import Summoner
 from dotenv import load_dotenv
+from tkinter.ttk import *
 
+# getting Championinfo out of json file
 with open('ChampionInfo.json', encoding="utf8") as f:
     data = json.load(f)
 
@@ -23,7 +24,41 @@ with open('ChampionInfo.json', encoding="utf8") as f:
             print("E:", E)
             print("R:", R)
     
-    getChampionCooldowns(["Aatrox", "Ahri"])
+# Window to display info
+master = tk.Tk()
+master.title("CACT")
+master.geometry("200x200")
+
+# Creates Textbox
+summoner_entry = Entry(master, width = 20)
+summoner_entry.insert(0, "Summoner Name")
+summoner_entry.pack(padx = 5, pady = 5)
+
+# Function to delete sample text in textbox
+def temp_text(e):
+    summoner_entry.delete(0, "end")
+    
+summoner_entry.bind("<FocusIn>", temp_text)
+
+
+def open_new_window():
+    new_window = tk.Toplevel(master)
+    new_window.title("CACT")
+    new_window.geometry("200x200")
+    Label(new_window,
+            text= "This is a new window").pack
+
+label = Label(master,
+        text = "This is the main Window")
+
+label.pack(pady = 10)
+
+btn = Button(master,
+        text= "Search",
+        comman = open_new_window)
+btn.pack(pady = 10)
+
+tk.mainloop()
     
 
 #load_dotenv()
