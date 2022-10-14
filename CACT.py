@@ -23,7 +23,7 @@ with open('ChampionInfo.json', encoding="utf8") as f:
             print("E:", E)
             print("R:", R)
     
-    getChampionCooldowns(["Aatrox"])
+    getChampionCooldowns(["Aatrox", "Ahri"])
     
 
 #load_dotenv()
