@@ -27,7 +27,7 @@ with open('ChampionInfo.json', encoding="utf8") as f:
 # Window to display info
 master = tk.Tk()
 master.title("CACT")
-master.geometry("200x200")
+master.geometry("200x100")
 
 # Creates Textbox
 summoner_entry = Entry(master, width = 20)
@@ -44,14 +44,9 @@ summoner_entry.bind("<FocusIn>", temp_text)
 def open_new_window():
     new_window = tk.Toplevel(master)
     new_window.title("CACT")
-    new_window.geometry("200x200")
+    new_window.geometry("1000x500")
     Label(new_window,
             text= "This is a new window").pack
-
-label = Label(master,
-        text = "This is the main Window")
-
-label.pack(pady = 10)
 
 btn = Button(master,
         text= "Search",
