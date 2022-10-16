@@ -40,7 +40,7 @@ def temp_text(e):
     
 summoner_entry.bind("<FocusIn>", temp_text)
 
-
+# Opens window where information gets displayed
 def open_new_window():
     new_window = tk.Toplevel(master)
     new_window.title("CACT")
