@@ -49,7 +49,7 @@ def open_new_window():
             text= "This is a new window").pack
 
 btn = Button(master,
-        text= "Search",
+        text = "Search Game",
         comman = open_new_window)
 btn.pack(pady = 10)
 
