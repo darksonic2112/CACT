@@ -6,7 +6,7 @@ from cassiopeia import Summoner
 from dotenv import load_dotenv
 from tkinter.ttk import *
 
-# getting Championinfo out of json file
+# Getting Championinfo out of json file
 with open('ChampionInfo.json', encoding="utf8") as f:
     data = json.load(f)
 
